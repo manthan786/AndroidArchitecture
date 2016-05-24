@@ -2,18 +2,21 @@ package com.architecture.login;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.ActionBarActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
 
 import com.androidArch.R;
+import com.architecture.login.presenter.LoginPresenter;
+import com.architecture.login.presenter.LoginPresenterImpl;
+import com.architecture.login.view.LoginView;
+import com.architecture.main.BaseActivity;
 import com.architecture.main.MainActivity;
 
 
 
-public class LoginActivity extends ActionBarActivity implements LoginView,View.OnClickListener{
+public class LoginActivity extends BaseActivity implements LoginView,View.OnClickListener{
 
     private ProgressBar progressBar;
     private EditText username;
@@ -25,7 +28,6 @@ public class LoginActivity extends ActionBarActivity implements LoginView,View.O
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
         init();
     }
 
@@ -83,5 +85,10 @@ public class LoginActivity extends ActionBarActivity implements LoginView,View.O
            case R.id.button:
                presenter.validateCredentials(username.getText().toString(),password.getText().toString());
        }
+    }
+
+    @Override
+    protected int getLayoutResource() {
+        return R.layout.activity_login;
     }
 }

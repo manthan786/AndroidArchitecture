@@ -1,4 +1,4 @@
-package com.architecture.login;
+package com.architecture.login.presenter;
 
 /**
  * Created by manthan on 24-05-2016.

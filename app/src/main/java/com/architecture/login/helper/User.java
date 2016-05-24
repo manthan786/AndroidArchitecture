@@ -1,4 +1,4 @@
-package com.architecture.login;
+package com.architecture.login.helper;
 
 import com.architecture.utils.RestResponse;
 

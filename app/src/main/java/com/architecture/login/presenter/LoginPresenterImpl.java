@@ -1,10 +1,15 @@
-package com.architecture.login;
+package com.architecture.login.presenter;
 
 import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.LoaderManager;
 import android.support.v4.content.Loader;
 
+import com.architecture.login.LoginActivity;
+import com.architecture.login.view.LoginView;
+import com.architecture.login.helper.UserResponse;
+import com.architecture.login.data.LoginInteractor;
+import com.architecture.login.data.LoginInteractorImpl;
 import com.architecture.utils.Global;
 import com.architecture.utils.HttpWrapper;
 import com.architecture.utils.RestLoader;

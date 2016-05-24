@@ -1,4 +1,4 @@
-package com.architecture.login;
+package com.architecture.login.view;
 
 /**
  * Created by manthan on 24-05-2016.
